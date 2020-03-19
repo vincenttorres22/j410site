@@ -1,0 +1,371 @@
+<!doctype html>
+
+<html>
+	
+<head>
+	
+<!--The following displays language used in browser to interpret page -->
+<meta charset="UTF-8">
+
+<!--The following line of code displays the page title on a browser tab -->
+<title>Site Title | Born Naked</title>
+
+<!--link tags are for linking to external files, in this case your CSS stylesheet-->
+<link href="style.css" rel="stylesheet" type="text/css">
+	
+<!--link tags are for linking to external files, in this case a special CSS stylesheet-->
+<link href="normalize.css" rel="stylesheet" type="text/css">
+
+<!--the following tag tells the browser to adjust the site according to screen size-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--The following code links to the jquery library -->
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+<!--The following code links to the javascript file that runs the slideshow -->	
+<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+    
+<!--The following code links to the javascript file that runs the parallax image -->    
+<script src="js/parallax.min.js"></script>
+	
+<!--The following code links to Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Raleway:900|Rubik" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Caladea&display=swap" rel="stylesheet">
+    
+<!-- Favicon-->    
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+ 
+<!--The following javscript runs the jquery slideshow -->
+<script type="text/javascript">
+$('#slider').cycle({});
+</script>
+
+<!--The following javascript runs the nav bar which disappears on scroll-->
+<script type="text/javascript">
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+</script>
+    
+<!--Favicon - images are in a folder called 'fav'-->
+<link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+<link rel="manifest" href="img/fav/site.webmanifest">
+<link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!--End Favicon-->
+    
+<!--back to top button-->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}    
+</script> 
+    
+</head>
+
+<body>
+    
+    
+
+<!--beginning of navigation section-->
+<header> 
+<div class="nav-container">
+<div class="brand"><img src="img/logo.jpg" width="100" height="70" alt=""/></div>
+  
+<nav>
+<div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+  <ul class="nav-list">
+        <li>
+          <a href="#home">About</a>
+        </li>
+	   <li>
+          <a href="#gal">Paint Nights</a>
+		  </li>
+	  	<li>
+          <a href="#tl">Importance</a>
+        </li>
+        <li>
+          <a href="#vid">President</a>
+			</li>
+      <li>
+          <a href="#num">History</a>
+			</li>
+      </ul>
+</nav>
+</div>
+<!--closing navigation tag-->
+</header>
+<!--end of navigation section-->
+    
+<!--main image-->
+    <div class="container">
+</div>
+<!--animated welcome-->
+    <div class="wrapper"></div>
+<!--animated welcome code here-->
+  <body>
+      <div class="first-content">
+        <ul class="first-text hidden">
+            <li>W</li>
+            <li>E</li>
+            <li>L</li>
+            <li>C</li>
+            <li>O</li>
+            <li>M</li>
+            <li>E</li>
+        </ul>
+      </div>
+
+
+</body>
+<!--beginning of main content area-->
+<div class="row whiteBG">
+<h2 id="home">"We Are All Born Naked, and the Rest is Drag"</h2>
+    <h3>-RuPaul Charles</h3>
+<article>
+<p class="tab">Cal Poly's Drag Club is dedicated to delivering mesmerizing art and entertainment through gender performance.<br><br>The club has been an outlet for queer individuals and allies since 2015 to express themselves in ways that they felt they previously couldn't..</p>
+<p class="tab"><a href="#gal"> Paint Nights</a></p>
+</article>
+</div>
+
+<!--beginning of slideshow section-->
+<div class="row blueBG"><!--beginning of row-->
+<h2 id="gal">Drag Club Paint Nights</h2>
+<article><!--beginning of article-->
+<p class="tab">Every other week, Drag Club hosts paint nights in order for members of the club and aspiring drag performers to get help with anything they need before a performance. This can range anywhere from wig styling to makeup tips and tricks. Usually off campus, these paint nights are a great way for members to socialize and come together outside of school.</p>
+<!--beginning of slideshow-->
+<div id="slider"
+data-cycle-caption="#alt-caption"
+data-cycle-caption-template="{{alt}}"
+data-cycle-fx="scrollHorz"
+data-cycle-pause-on-hover="true"
+data-cycle-speed="200">
+<div class="cycle-prev"></div>
+<div class="cycle-next"></div>
+<img src="img/1.jpg" width="100%" height="100%" alt="The Cal Poly Drag Club hosts its bi-monthly paint night in downtown SLO. Paint nights offer opportunities for members to bond and seek advice/help with anything from sewing outfits all the way to styling wigs and doing makeup. Club president Lewis Goodman, also known as Nova Caine, a fifth year industrial engineering major commented on the purpose of paint nights, saying that they mainly serve to “foster an environment of sisterhood, fun  and acceptance while teaching newer queens the basics of drag.”"/>
+<img src="img/2.jpg" width="100%" height="100%" alt="Goodman steams his wig in order to straighten and detangle it as the show approaches in just 15 days (February 22nd). “This wig has been through a lot. She’s seen it all and she could definitely use a trim but she's been with me since the beginning” says Goodman."/>
+<img src="img/3.jpg" width="100%" height="100%" alt="Tatum Jessica, a fourth year theater major completes her look by placing pearls along her eyelid crease. “I am always inspired by mermaids and their beauty and I just wanted to give you under the sea vibes with the pearls but still make it very soft and feminine because that is true to who I am” says Jessica. Jessica has been a stage manager for the drag club for two years and hosts a lot of the paint nights at her house downtown."/>
+<img src="img/4.jpg" width="100%" height="100%" alt="Alison O’Neill, known in the drag community as Chief Queef stares into the camera with their signature makeup look. “Doing drag allows me to express some of what life is like with autism, mental illness, and being trans. It is more than just a little cathartic. Being able to turn something that is making my life a living hell into something constructive, artistic and maybe even good is eye opening to me” says O’Neill.
+"/>
+<img src="img/5.jpg" width="100%" height="100%" alt="After the makeup is all finished, it’s “nothing but fun, games and lots and lots of queer shenanigans” says Karl Zieber, third year mathematics major. Members of the drag club, Zieber (left) and Hannah Hazelbaker (right) have a good laugh after watching Fergie sing the “Star Spangled Banner” at the NBA All-Star game in 2018. "/>
+<img src="img/6.jpg" width="100%" height="100%" alt="Jessica, the host of the paint night sits back and searches videos of queer artists performing for the club to watch once everyone has finished their makeup and tasks for the night. The members watch and discuss ideas surrounding performances at the upcoming show, creating an environment of creativity.
+"/>
+<img src="img/7.jpg" width="100%" height="100%" alt="Danielle Hyde, a second year communications major, puts on drag for her very first time. “I’m nervous to perform,” says Hyde “I’ve never done anything like this and I don’t know what I’m supposed to do or if it is something I can do.” Hyde was introduced to drag her freshman year at a Drag 101 social hosted in Muir Hall by resident advisor Zieber.
+"/>
+<img src="img/8.jpg" width="100%" height="100%" alt=""/>
+<img src="img/9.jpg" width="100%" height="100%" alt=""/>
+<img src="img/10.jpg" width="100%" height="100%" alt="A quick swipe of a liquid lipstick transforms the lips color completely and ties the whole look together, reminding us all what drag is truly about. “Drag is not about competition, or about winning” says Goodman “it’s about doing what you love and changing the world with your art. Anyone can wear lipstick, but it's what you do while you’re wearing the lipstick that truly matters.”
+"/>
+</div><!--end of slideshow-->
+<!--beginning of slideshow caption-->
+<div id="alt-caption" class="center">
+</div><!--end of slideshow caption-->
+<p class="tab"><a href="#tl">Importance of Drag</a></p>
+</article><!--end of article-->
+</div><!--end of row-->
+<!--end of slideshow section-->
+	
+<!--beginning of audio section-->
+<div class="row whiteBG">
+<h2 id="tl">Why is Drag So Important?</h2>
+<article>
+  <p class="tab">Click on images to hear why people think drag is so important today given our political climate. ...<br>(Double-click to pause audio)</p>
+  <div class="table">
+	<div id="trip">
+<audio id="audio_1">
+    <source src="audio/1.mp3" type="audio/mpeg" />
+</audio>        
+<audio id="audio_2">
+    <source src="audio/2.mp3" type="audio/mpeg" />
+</audio>        
+<audio id="audio_3">
+	<source src="audio/3.mp3" type="audio/mpeg" />
+</audio>
+        
+<img src="img/rollover/1.GIF" class="rollover" alt="description" onMouseOver="this.src='img/rollover/1.jpg'" onMouseOut="this.src='img/rollover/1.gif'" onClick="document.getElementById('audio_1').play(); return false;" onDblClick="document.getElementById('audio_1').pause(); return false;">
+ /&gt; 
+            
+<img src="img/rollover/2.gif" class="rollover" alt="description" onMouseOver="this.src='img/rollover/2.jpg'" onMouseOut="this.src='img/rollover/2.gif'" onClick="document.getElementById('audio_2').play(); return false;" onDblClick="document.getElementById('audio_2').pause(); return false;">
+ /&gt;
+            
+<img src="img/rollover/3.gif" class="rollover" alt="description" onMouseOver="this.src='img/rollover/3.jpg'" onMouseOut="this.src='img/rollover/3.gif'" onClick="document.getElementById('audio_3').play(); return false;" onDblClick="document.getElementById('audio_3').pause(); return false;">
+/&gt;
+	</div>
+</div>
+<p class="tab"><a href="#vid">Video</a></p>		
+</article>
+</div>
+<!--end of audio section-->
+    
+<!--beginning of parallax image-->
+<div class="parallax" data-parallax="scroll" data-bleed="20" data-speed="0.2" iosFix="true" data-image-src="img/parallax.jpeg">
+</div>
+<!--end of parallax image-->
+
+<!--beginning of video section-->
+<div class="row orangeBG">
+<h2 id="vid">Drag Club President</h2>
+<article>
+<p class="tab">Lewis Goodman (Nova Caine) talks about the drag club and the power and confidence that comes with gender performance.</p>	
+<video width="100%" height="100%" poster="img/poster.jpg" controls>
+<source src="img/video.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p class="tab"><a href="#num">History</a></p>
+</article>
+</div>
+<!--end of video section-->
+
+<!--beginning of infographic section-->
+<div class="row whiteBG">
+<h2 id="num">How Did Drag Start?</h2>
+<article>
+<p class="tab"></p>
+<!--infographic embed code here-->
+<div class="infogram-embed" data-id="c42f39fd-8d95-45e6-973c-e335b3238c78" data-type="interactive" data-title="Timeline Dark Infographic"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/c42f39fd-8d95-45e6-973c-e335b3238c78" style="color:#989898!important;text-decoration:none!important;" target="_blank">Timeline Dark Infographic</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+</article>
+    <footer class="footer">
+<h2></h2>
+Vincent Torres | San Luis Obispo, CA | <a href="img/33.png">Style Tile</a> | Contact: <a href="mailto:vtorre20@calpoly.edu">
+  Email</a>
+</footer>
+
+</div>
+<!--end of infographic section-->
+	
+<!--beginning of footer-->
+    <footer><a> Born Naked | San Luis Obispo, CA | <a href="mailto: vinchenzotorres22@gmail.com?Subject=Inquiry" target="_top"> Send Email | Copyright 2020| Site by Vincent Torres </a>
+        </a> </footer>
+<!--end of footer-->
+	
+</body>
+   <script>
+       (function() {
+
+    setTimeout(function() {
+        $('.first-text').removeClass('hidden');
+    }, 500);
+
+})();
+    </script>
+
+  
+    
+	
+<!--the following script controls the responsive navigation-->
+<script>
+	(function($) { // Begin jQuery
+  $(function() { // DOM ready
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      // Close one dropdown when selecting another
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.nav-dropdown').hide();
+    });
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+  }); // end DOM ready
+
+})(jQuery); // end jQuery
+	</script>
+	<script>
+	var headertext = [];
+var headers = document.querySelectorAll("#miyazaki th"),
+tablerows = document.querySelectorAll("#miyazaki th"),
+tablebody = document.querySelector("#miyazaki tbody");
+for(var i = 0; i < headers.length; i++) {
+	var current = headers[i];
+	headertext.push( current.textContent.replace( /\r?\n|\r/,"") );
+}
+for (var i = 0, row; row = tablebody.rows[i]; i++) {
+	for (var j = 0, col; col = row.cells[j]; j++) {
+		col.setAttribute("data-th", headertext[j]);
+	}
+}
+</script>
+	
+	<!----Prevents audio tracks from playing simultaneously---->
+<script>
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+    </script>
+
+</html>
